@@ -3,14 +3,17 @@ import {useContext} from 'react'
 import AuthContext from '../context/AuthContext'
 
 
-const PrivateRoute = ({ children }) => {
-  console.log("Private route works");
-  let {user} = useContext(AuthContext)
+function PrivateRoute({ children }) {
+  const {user} = useContext(AuthContext);
+  return user ? children : <Navigate to="/userlogin" />;
+}
 
-  return(
-     user ? children : <Navigate to="/adminlogin" /> 
-)
+function AdminRoute({ children }) {
+  const {user} = useContext(AuthContext);
+  return user ? children : <Navigate to="/admin/login" />;
+}
 
-};
-
-export default PrivateRoute;
+export { 
+PrivateRoute,
+AdminRoute
+}
