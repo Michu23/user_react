@@ -18,7 +18,7 @@ const UserHeader = () => {
       </div>
       <div className="d-flex">
         <h5
-          className="px-2"
+          className="px-2 cp"
           onClick={() => {
             navigate("/admin");
           }}
@@ -27,12 +27,13 @@ const UserHeader = () => {
         </h5>
 
         {user ? (
-          <h5 className="px-2" onClick={logoutAdmin}>
+          <h5 className="px-2 cp" onClick={logoutAdmin}>
             Logout
           </h5>
         ) : (
           <h5
-            className="px-2"
+            className="px-2 cp"
+            
             onClick={() => {
               navigate("/admin/login");
             }}

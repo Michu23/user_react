@@ -13,12 +13,12 @@ const Header = () => {
         {user? <h5>Hello {user.username}</h5> : <h5>Hello User</h5>}
         
       </div>
-      <div className="ml-5">
+      <div className="ml-5 cp">
         <h2>Zorro Estore </h2>
       </div>
       <div className="d-flex">
         <h5
-          className="px-2"
+          className="px-2 cp"
           onClick={() => {
             navigate("/");
           }}
@@ -27,12 +27,12 @@ const Header = () => {
         </h5>
 
         {user ? (
-          <h5 className="px-2" onClick={logoutUser}>
+          <h5 className="px-2 cp" onClick={logoutUser}>
             Logout
           </h5>
         ) : (
           <h5
-            className="px-2"
+            className="px-2 cp"
             onClick={() => {
               navigate("/userlogin");
             }}

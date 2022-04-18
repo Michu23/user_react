@@ -145,6 +145,20 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const createTodoo = async () =>{
+
+    const response = await fetch("http://127.0.0.1:8000/api/createNotes/",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({  }),
+    });
+
+    
+
+  }
+
   
 
   const signupUser = async ({ name, username, password }) => {
@@ -329,6 +343,8 @@ export const AuthProvider = ({ children }) => {
         }
       });
   };
+
+
 
   let contextData = {
     user: user,
